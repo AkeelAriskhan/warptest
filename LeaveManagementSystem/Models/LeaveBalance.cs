@@ -19,24 +19,19 @@ namespace LeaveManagementSystem.Models
         [Column("year")]
         public int Year { get; set; }
 
-        [Column("allocated_days")]
-        [Column(TypeName = "decimal(5,2)")]
+        [Column("allocated_days", TypeName = "decimal(5,2)")]
         public decimal AllocatedDays { get; set; }
 
-        [Column("used_days")]
-        [Column(TypeName = "decimal(5,2)")]
+        [Column("used_days", TypeName = "decimal(5,2)")]
         public decimal UsedDays { get; set; } = 0;
 
-        [Column("pending_days")]
-        [Column(TypeName = "decimal(5,2)")]
+        [Column("pending_days", TypeName = "decimal(5,2)")]
         public decimal PendingDays { get; set; } = 0;
 
-        [Column("remaining_days")]
-        [Column(TypeName = "decimal(5,2)")]
+        [Column("remaining_days", TypeName = "decimal(5,2)")]
         public decimal RemainingDays { get; set; }
 
-        [Column("carried_forward_days")]
-        [Column(TypeName = "decimal(5,2)")]
+        [Column("carried_forward_days", TypeName = "decimal(5,2)")]
         public decimal CarriedForwardDays { get; set; } = 0;
 
         [Column("created_at")]

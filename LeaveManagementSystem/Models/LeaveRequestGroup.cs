@@ -16,8 +16,7 @@ namespace LeaveManagementSystem.Models
         [Column("total_requests")]
         public int TotalRequests { get; set; }
 
-        [Column("total_days")]
-        [Column(TypeName = "decimal(5,2)")]
+        [Column("total_days", TypeName = "decimal(5,2)")]
         public decimal TotalDays { get; set; }
 
         [MaxLength(20)]

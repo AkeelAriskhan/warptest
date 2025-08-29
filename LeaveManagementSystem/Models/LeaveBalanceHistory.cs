@@ -21,16 +21,13 @@ namespace LeaveManagementSystem.Models
         [Column("action_type")]
         public string ActionType { get; set; } = string.Empty; // "Allocated", "Used", "Adjusted", "Carried_Forward"
 
-        [Column("days_changed")]
-        [Column(TypeName = "decimal(5,2)")]
+        [Column("days_changed", TypeName = "decimal(5,2)")]
         public decimal DaysChanged { get; set; }
 
-        [Column("balance_before")]
-        [Column(TypeName = "decimal(5,2)")]
+        [Column("balance_before", TypeName = "decimal(5,2)")]
         public decimal BalanceBefore { get; set; }
 
-        [Column("balance_after")]
-        [Column(TypeName = "decimal(5,2)")]
+        [Column("balance_after", TypeName = "decimal(5,2)")]
         public decimal BalanceAfter { get; set; }
 
         [Column("reason")]
