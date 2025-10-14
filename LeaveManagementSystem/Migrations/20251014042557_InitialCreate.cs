@@ -203,19 +203,19 @@ namespace LeaveManagementSystem.Migrations
                         column: x => x.changed_by,
                         principalTable: "employees",
                         principalColumn: "employee_id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_leave_balance_history_employees_employee_id",
                         column: x => x.employee_id,
                         principalTable: "employees",
                         principalColumn: "employee_id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_leave_balance_history_leave_types_leave_type_id",
                         column: x => x.leave_type_id,
                         principalTable: "leave_types",
                         principalColumn: "leave_type_id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -242,7 +242,7 @@ namespace LeaveManagementSystem.Migrations
                         column: x => x.employee_id,
                         principalTable: "employees",
                         principalColumn: "employee_id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_leave_balances_leave_types_leave_type_id",
                         column: x => x.leave_type_id,
@@ -385,7 +385,7 @@ namespace LeaveManagementSystem.Migrations
                         column: x => x.employee_id,
                         principalTable: "employees",
                         principalColumn: "employee_id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_notifications_leave_request_groups_related_request_group_id",
                         column: x => x.related_request_group_id,
